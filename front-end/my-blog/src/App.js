@@ -1,10 +1,11 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './NavBar';
-import HomePage from './pages/Home';
+import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ArticleListPage from './pages/ArticlesListPage';
 import ArticlePage from './pages/ArticlePage';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/articles/:articleId" element={<ArticlePage />} />
             <Route path="/articles" element={<ArticleListPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </div>
       </div>

@@ -8,8 +8,7 @@ const ArticlePage = () => {
 
   if (!article) {
     return <NotFoundPage />;
-  }
-  
+  } 
   return (
     <>
       <h1>{article.title}</h1>
